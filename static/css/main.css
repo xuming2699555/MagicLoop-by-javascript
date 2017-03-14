@@ -1,0 +1,131 @@
+body{
+	padding: 1%;
+}
+._row1 a{
+	cursor: pointer;
+	color: black;
+	text-decoration: underline;
+}
+._row2>div{
+	padding-right: 0;
+}
+._row2>div+div{
+	position: relative;
+	top: 8px;
+	overflow: hidden;
+}
+._row2 button{
+	position: relative;
+	top: 10px;
+}
+#collapse label{
+	border: solid 2px;
+	margin-left: 0.25em;
+	padding: 5px;
+	border-radius: 10px 10px 0 0;
+	cursor: pointer;
+}
+#collapse label:hover{
+	background-color: #cccccc;
+}
+#collapse label.on{
+	background-color: #545454;
+	border-bottom-color: #545454;
+}
+#collapse label a{
+	color: black;
+	text-decoration: none;
+}
+#collapse label.on a{
+	color: white;
+}
+._row3{
+	background-color: #545454;
+	border:solid 2px;
+}
+._row3 ._shit{
+
+}
+._row3 .pager{
+	margin:0;
+}
+._row3 div.h2{
+	color: white;
+	margin-top: 10px;
+}
+._row3 div.h6{
+	margin-top: 15px;
+}
+._row3 ul{
+	text-align: left;
+}
+._row3 ul li a{
+	background-color: #888888;
+	color: black;
+	border:solid 2px black;
+	margin-right: 5px;
+}
+._row3 ul li.on a{
+	background-color: #eeeeee;
+}
+._row4{
+	border:solid 1px;
+}
+._row4 ._left{
+	padding: 0.5%;
+}
+._row4 ._left ._form{
+	position: absolute;
+}
+._row4 ._left ._box{
+	width: 500px;
+	border:solid 2px;
+	padding:10px;
+	background-color: #ccffff;
+	border-radius: 20px;
+}
+._row4 ._left ._box input{
+	width: 90%;
+}
+._row4 ._left ._box button{
+	border:solid 2px;
+	border-radius: 20px;
+	margin-right: 5px;
+}
+._row4 ._left .min{
+	border-top:solid 2px;
+	border-left: solid 2px;
+	width: 20px;
+	height: 20px;
+	transform: rotate(45deg);
+	position: relative;
+	top: 10px;
+	left: 40px;
+	background-color: #ccffff;
+}
+._row4 ._sider{
+	border-left:solid 1px;
+}
+._agents{
+	margin:5px auto;
+	border:solid 1px;
+	border-radius: 5px;
+	padding: 0.4%;
+}
+._agents ._icon{
+	width: 50px;
+	height: 50px;
+	border-radius:25px;
+	background-color: #666666;
+}
+.idle{background-color: #ccffcc;}
+.building{background-color: #ffffcc;}
+
+._agents p5{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+._agents ._del{
+	cursor: pointer;
+}

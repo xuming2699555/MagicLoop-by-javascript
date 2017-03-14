@@ -1,0 +1,16 @@
+@media screen and (max-width: 992px) {
+	._agents ._icon{
+		display: none;
+	}
+	._agents{
+	margin:0;
+	border:solid 1px;
+	border-radius: 5px;
+	padding: 0.4%;
+	}
+	._row4 ._sider{
+	border-left: none;
+	border-top:solid 1px;
+	}
+}
+}

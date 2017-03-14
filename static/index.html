@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Homework of Ming Xu</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/responsive.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row _row1" ng-controller="ctrl_1"  ng-mouseover="removeForm()">
+		<div class="col-md-12 text-right">
+			Signed in as &nbsp;<a href="">{{role}}</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right"></span><a ng-click="signout()">Sign out</a>
+		</div>	
+	</div>
+	<div class="row _row2" ng-controller="ctrl_2"  ng-mouseover="removeForm()">
+		
+		<div class="col-md-6">
+			<span class="h1">Cruise</span>
+			<button type="button" id="colbtn" class="pull-right" ng-click="myCollapse()">
+            <span class="glyphicon glyphicon-align-justify"></span>
+    		</button>
+		</div>
+		<div class="col-md-6">	
+			<div class="_lablelist" id="collapse">
+				<div class="">
+					<div class="pull-right"><label ng-click="label(0)" ng-class="labelon[0]"><a>DASHBOARD</a></label></div>
+					<div class="pull-right"><label ng-click="label(1)" ng-class="labelon[1]"><a>MY CRUISE</a></label></div>
+					<div class="pull-right"><label ng-click="label(2)" ng-class="labelon[2]"><a>AGENTS</a></label></div>
+					<div class="pull-right"><label ng-click="label(3)" ng-class="labelon[3]"><a>HELP</a></label></div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="row _row3" ng-controller="ctrl_3"  ng-mouseover="removeForm()">
+		<div class="col-lg-1 col-sm-2 h2">
+			Agents
+			<span class="glyphicon glyphicon-chevron-right _shit pull-right" ng-click="shit()"></span>
+		</div>
+		<div class="col-lg-11 col-sm-8 h6">
+			<ul class="pager">
+				<li ng-click="label(0)" ng-class="labelon[0]"><a href="">ALL</a></li>
+				<li ng-click="label(1)" ng-class="labelon[1]"><a href="">Physical</a></li>
+				<li ng-click="label(2)" ng-class="labelon[2]"><a href="">Virtual</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row _row4" ng-controller="ctrl_4">
+		<div class="col-md-9 col-lg-10 _left">
+			<ng-include ng-init="id='AGENTS'" src="'pages/'+id+'.html'"></ng-include>
+			<div class="_form"><ng-include src="'pages/form.html'" ng-show="ifForm"></ng-include></div>
+		</div>
+		<div class="col-md-3 col-lg-2 _sider">
+			<table class="table">
+			  <thead>
+			    <tr>
+			      <th>Summary</th>
+			      <th></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Building<br><br>Idle</td>
+			      <td>{{building}}&nbsp;&nbsp;<br><br>{{idle}}&nbsp;&nbsp;</td>
+			    </tr>
+			  </tbody>
+			</table>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>History</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><small>
+							bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br>bjstmngbgr02/Acceptance_test<br></small>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<footer>Copyright: Thoughtworks lnc.</footer>
+	</div>
+</div>
+</body>
+</html>

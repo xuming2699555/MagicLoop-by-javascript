@@ -1,0 +1,29 @@
+<div class="row _agents"  ng-repeat="item in data | filter:{filter:myfilter}" ng-class="item.type">
+		<div class="_icon col-md-1"></div>
+		<div class="col-md-11">
+			<div class="row">
+				<div class="col-md-5 col-lg-3 col-sm-4">
+				<strong>{{item.name}}</strong>
+				</div>
+				<div class="col-md-7 col-lg-9 col-sm-8">
+				<strong>
+					&Iota;&nbsp;{{item.type}}&nbsp;&nbsp;&Iota;&nbsp;{{item.ip}}&nbsp;&nbsp;&Iota;&nbsp;{{item.src}}
+				</strong>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-11">	
+			<div class="row">
+				<div class="col-md-4 col-lg-3 col-sm-3" ng-click="add($event,item.name)">
+					<p5><span class="glyphicon glyphicon-plus"></span>&nbsp;Specify Resources</p5>
+				</div>
+				<div class="col-md-6 col-lg-7 col-sm-7">
+					<strong>Resources:</strong>
+					<span id="sources" ng-repeat="resource in item.resources">
+						{{resource}}&nbsp;<span class="glyphicon glyphicon-remove _del" ng-click="deleteRes(item.name,resource)"></span>
+					</span>
+				</div>
+				<div  class="col-md-2 col-lg-2 col-sm-2 text-right"><span class="glyphicon glyphicon-ban-circle"></span>&nbsp;Deny</div>
+			</div>
+		</div>		
+</div>
